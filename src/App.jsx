@@ -4,16 +4,23 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 import { getFirestore, collection, addDoc, getDocs, doc, setDoc, getDoc, query, orderBy } from 'firebase/firestore';
 
 // ১. আপনার ফায়ারবেস কনফিগারেশন এখানে বসান
-const firebaseConfig = {
-	apiKey: "YOUR_API_KEY",
-	authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-	projectId: "YOUR_PROJECT_ID",
-	storageBucket: "YOUR_PROJECT_ID.appspot.com",
-	messagingSenderId: "YOUR_SENDER_ID",
-	appId: "YOUR_APP_ID"
-};
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-const app = initializeApp(firebaseConfig);
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBEuwXoLhDkWKsC22BpTLfRoFJkIiesWdQ",
+  authDomain: "takapai-ea311.firebaseapp.com",
+  projectId: "takapai-ea311",
+  storageBucket: "takapai-ea311.firebasestorage.app",
+  messagingSenderId: "207263236015",
+  appId: "1:207263236015:web:eb3de60300c7d05bd0795a",
+  measurementId: "G-K88HDKP6SQ"
+};const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
